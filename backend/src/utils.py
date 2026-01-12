@@ -1,5 +1,5 @@
 from fastapi import HTTPException
-from clerk_backedn_api import Clerk, AuthenticateRequestOptions
+from clerk_backend_api import Clerk, AuthenticateRequestOptions
 import os
 from dotenv import load_dotenv
 
