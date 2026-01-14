@@ -1,6 +1,6 @@
 import {useAuth} from "@clerk/clerk-react"
 
-export const useAPI = () => {
+export const useApi = () => {
     const {getToken} = useAuth()
 
     const makeRequest = async (endpoint, options = {}) => {
@@ -12,7 +12,7 @@ export const useAPI = () => {
             }
         }
 
-        const response = await fetch('http://localhost:8000/api/${endpoint}', {
+        const response = await fetch(`http://localhost:8000/api/${endpoint}`, {
             ...defaultOptions,
             ...options,
         })

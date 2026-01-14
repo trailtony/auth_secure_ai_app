@@ -27,4 +27,26 @@ export function MCQChallenge({challenge, showExplanation = false}) {
 
         return "option"
     }
+
+    return <div className="challenge-display">
+        <p><strong>Difficulty</strong>: {challenge.difficulty}</p>
+        <p className="challenge-title">{challenge.title}</p>
+        <div className="options">
+            {options.map((option, index) => (
+                <div
+                    className={getOptionClass(index)}
+                    key={index}
+                    onClick={() => handleOptionSelect(index)}
+                >
+                    {option}
+                </div>
+            ))}
+        </div>
+        {shouldShowExplanation && selectedOption !== null && (
+            <div className="explanation">
+                <h4>Explanation</h4>
+                <p>{challenge.explanation}</p>
+            </div>
+        )}
+    </div>
 }
