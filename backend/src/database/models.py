@@ -12,7 +12,7 @@ class Challenge(Base):
 
     id = Column(Integer, primary_key=True)
     difficulty = Column(String, nullable=False)
-    date_created = Column(String, default=datetime.now)
+    date_created = Column(DateTime, default=datetime.now)
     created_by = Column(String, nullable=False)
     title = Column(String, nullable=False)
     options = Column(String, nullable=False)

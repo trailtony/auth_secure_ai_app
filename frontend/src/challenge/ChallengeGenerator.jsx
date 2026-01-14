@@ -1,7 +1,7 @@
 import "react"
-import { useState, useEffect, use } from "react"
-import { MCQChallenge } from "./MCQChallenge.jsx";
-import { useAPI } from "../utils/api.js";
+import {useState, useEffect} from "react"
+import {MCQChallenge} from "./MCQChallenge.jsx";
+import {useApi} from "../utils/api.js"
 
 export function ChallengeGenerator() {
     const [challenge, setChallenge] = useState(null)
@@ -9,7 +9,7 @@ export function ChallengeGenerator() {
     const [error, setError] = useState(null)
     const [difficulty, setDifficulty] = useState("easy")
     const [quota, setQuota] = useState(null)
-    const { makeRequest } = useAPI()
+    const {makeRequest} = useApi()
 
     useEffect(() => {
         fetchQuota()
@@ -31,15 +31,14 @@ export function ChallengeGenerator() {
         try {
             const data = await makeRequest("generate-challenge", {
                 method: "POST",
-                body: JSON.stringify({ difficulty })
-            }
-        )
-        setChallenge(data)
-        fetchQuota()
+                body: JSON.stringify({difficulty})
+                }
+            )
+            setChallenge(data)
+            fetchQuota()
         } catch (err) {
-            setError(err.message || "Failed to generate challenge")
-        }
-        finally {
+            setError(err.message || "Failed to generate challenge.")
+        } finally {
             setIsLoading(false)
         }
     }
@@ -76,7 +75,7 @@ export function ChallengeGenerator() {
 
         <button
             onClick={generateChallenge}
-            disabled={isLoading || quota?.quota_remaining === 0}
+            disabled={false}
             className="generate-button"
         >
             {isLoading ? "Generating..." : "Generate Challenge"}
