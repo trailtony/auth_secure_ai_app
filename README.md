@@ -1,10 +1,5 @@
 # AI Coding Challenge Generator
 
-[![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://www.python.org/downloads/)
-[![React](https://img.shields.io/badge/React-19.2-61dafb.svg)](https://reactjs.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.125+-009688.svg)](https://fastapi.tiangolo.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
 A full-stack web application that generates AI-powered coding challenges using OpenAI's GPT-4. Users can create personalized multiple-choice coding questions at different difficulty levels, with intelligent quota management and authentication powered by Clerk.
 
 ## ✨ Features
@@ -447,12 +442,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [React](https://reactjs.org/) - Frontend library
 - [Vite](https://vitejs.dev/) - Build tool
 
-## 📧 Contact
-
-Your Name - [your.email@example.com](mailto:your.email@example.com)
-
-Project Link: [https://github.com/yourusername/auth_secure_ai_app](https://github.com/yourusername/auth_secure_ai_app)
-
----
 
 ⭐ If you found this project helpful, please consider giving it a star!
